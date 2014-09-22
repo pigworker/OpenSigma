@@ -92,18 +92,18 @@ Prop(ositions/erties)
 Some students study some modules.
 
     for Student, Module -:
-      studies ?
+      prop Studies
 
-So what is "studies"? It's a type which exists for each pair of
+So what is "Studies"? It's a type which exists for each pair of
 student and module, containing at most one inhabitant (whose existence
 indicates that the student studies the module).
 
-    Student, Module, studies
+    Student, Module, Studies
 
 is thus the class of *triples* consisting of a student, a module, and
 the evidence that the student studies the module.
 
-You can write "studies" in any context with exactly one student and
+You can write "Studies" in any context with exactly one student and
 one module.
 
 
@@ -136,8 +136,8 @@ which should be further contractible to
 Each student studying a module might be present at one of that module's tests.
 And if they were present, they have a score
 
-    for Student, Module, studies, Test -:
-      present ? -:
+    for Student, Module, Studies, Test -:
+      prop Present -:
         score : [0..maxPoss]
 
 I'm making this notation up as I go along, but I'm learning something.
